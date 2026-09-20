@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import "./index.css";
 
 export default function App() {
   const [loaded, setLoaded] = useState(false);
@@ -72,6 +71,13 @@ export default function App() {
           box-sizing: border-box;
           margin: 0;
           padding: 0;
+        }
+
+        html,
+        body,
+        #root {
+          margin: 0;
+          min-height: 100%;
         }
 
         html {
@@ -731,6 +737,93 @@ export default function App() {
         }
 
         /* =========================
+           WELCOME TEAM
+        ========================= */
+
+        .welcome-team {
+          position: relative;
+          max-width: 850px;
+          margin: 80px auto 0;
+          text-align: center;
+        }
+
+        .welcome-title {
+          color: var(--gold-light);
+          font-family: "Great Vibes", cursive;
+          font-size: 46px;
+          font-weight: 400;
+          line-height: 1.3;
+        }
+
+        .welcome-copy {
+          max-width: 520px;
+          margin: 14px auto 0;
+          color: rgba(251,245,232,.7);
+          font-size: 14px;
+          line-height: 1.8;
+        }
+
+        .welcome-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+          margin-top: 40px;
+        }
+
+        .welcome-card {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          min-height: 190px;
+          padding: 34px 20px;
+          text-align: center;
+          border: 1px solid rgba(226,201,132,.35);
+          background: rgba(255,255,255,.025);
+        }
+
+        .welcome-card::before {
+          content: "";
+          position: absolute;
+          inset: 8px;
+          border: 1px solid rgba(226,201,132,.15);
+          pointer-events: none;
+        }
+
+        .welcome-mark {
+          color: var(--gold);
+          font-size: 16px;
+          line-height: 1;
+          margin-bottom: 16px;
+        }
+
+        .welcome-name {
+          color: var(--cream);
+          font-family: "Cormorant Garamond", serif;
+          font-size: 28px;
+          font-weight: 500;
+          line-height: 1.1;
+        }
+
+        .welcome-name::after {
+          content: "";
+          display: block;
+          width: 32px;
+          height: 1px;
+          background: var(--gold);
+          margin: 14px auto;
+        }
+
+        .welcome-role {
+          color: var(--gold-light);
+          font-size: 10px;
+          font-weight: 700;
+          letter-spacing: .24em;
+          text-transform: uppercase;
+        }
+
+        /* =========================
            DETAILS
         ========================= */
 
@@ -757,15 +850,21 @@ export default function App() {
         }
 
         .detail-icon {
-          width: 50px;
-          height: 50px;
+          width: 58px;
+          height: 58px;
           display: grid;
           place-items: center;
-          margin-bottom: 18px;
+          margin-bottom: 20px;
           border: 1px solid var(--gold);
           border-radius: 50%;
           color: var(--maroon);
           font-size: 19px;
+        }
+
+        .detail-icon svg {
+          width: 34px;
+          height: 34px;
+          display: block;
         }
 
         .detail-label {
@@ -1037,6 +1136,19 @@ export default function App() {
             padding: 55px 28px;
           }
 
+          .welcome-team {
+            margin-top: 64px;
+          }
+
+          .welcome-grid {
+            grid-template-columns: 1fr;
+            gap: 16px;
+          }
+
+          .welcome-card {
+            min-height: 160px;
+          }
+
           .video-section {
             padding: 75px 5vw;
           }
@@ -1086,7 +1198,8 @@ export default function App() {
             font-size: 45px;
           }
 
-          .invitation-script {
+          .invitation-script,
+          .welcome-title {
             font-size: 38px;
           }
 
@@ -1348,6 +1461,45 @@ export default function App() {
               An evening of mehndi • music • memories • merriment
             </p>
           </div>
+
+          {/* =========================
+              WELCOME TEAM
+          ========================= */}
+
+          <div className="welcome-team">
+            <h3 className="welcome-title">Your Welcome Team</h3>
+
+            <p className="welcome-copy">
+              The lovely girls who will be greeting every guest at the door with
+              warm smiles, open arms and a whole lot of love.
+            </p>
+
+            <div className="welcome-grid">
+              <article className="welcome-card">
+                <div className="welcome-mark">✦</div>
+
+                <h4 className="welcome-name">Tooba Usman</h4>
+
+                <div className="welcome-role">Brides' Sister</div>
+              </article>
+
+              <article className="welcome-card">
+                <div className="welcome-mark">✦</div>
+
+                <h4 className="welcome-name">Nimra Owais</h4>
+
+                <div className="welcome-role">Brides' Sister</div>
+              </article>
+
+              <article className="welcome-card">
+                <div className="welcome-mark">✦</div>
+
+                <h4 className="welcome-name">All Cousins</h4>
+
+                <div className="welcome-role">Brides' Cousins</div>
+              </article>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -1369,7 +1521,20 @@ export default function App() {
 
           <div className="details-grid">
             <div className="detail">
-              <div className="detail-icon">◷</div>
+              <div className="detail-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="3.5" y="5" width="17" height="15.5" rx="2" />
+                  <path d="M3.5 10h17M8 3v4M16 3v4" />
+                </svg>
+              </div>
 
               <div className="detail-label">Date</div>
 
@@ -1379,7 +1544,21 @@ export default function App() {
             </div>
 
             <div className="detail">
-              <div className="detail-icon">⌂</div>
+              <div className="detail-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M3.5 11.5 12 4l8.5 7.5" />
+                  <path d="M5.5 10v10h13V10" />
+                  <path d="M10 20v-5.5h4V20" />
+                </svg>
+              </div>
 
               <div className="detail-label">Venue</div>
 
@@ -1389,7 +1568,24 @@ export default function App() {
             </div>
 
             <div className="detail">
-              <div className="detail-icon">✦</div>
+              <div className="detail-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="12" r="1.8" />
+                  <ellipse cx="12" cy="6.6" rx="2.2" ry="3.4" />
+                  <ellipse cx="12" cy="6.6" rx="2.2" ry="3.4" transform="rotate(72 12 12)" />
+                  <ellipse cx="12" cy="6.6" rx="2.2" ry="3.4" transform="rotate(144 12 12)" />
+                  <ellipse cx="12" cy="6.6" rx="2.2" ry="3.4" transform="rotate(216 12 12)" />
+                  <ellipse cx="12" cy="6.6" rx="2.2" ry="3.4" transform="rotate(288 12 12)" />
+                </svg>
+              </div>
 
               <div className="detail-label">Occasion</div>
 
