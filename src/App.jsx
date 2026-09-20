@@ -1371,10 +1371,10 @@ export default function App() {
           />
 
           <div className="video-caption">
-            <div className="video-caption-small">Sarosh & Zoya</div>
+            <div className="video-caption-small"></div>
 
             <div className="video-caption-title">
-              Two Brides · One Celebration
+              
             </div>
           </div>
         </div>
@@ -1474,11 +1474,35 @@ export default function App() {
               warm smiles, open arms and a whole lot of love.
             </p>
 
-            <div className="welcome-grid">
+                        <div className="welcome-grid">
               <article className="welcome-card">
                 <div className="welcome-mark">✦</div>
 
-                <h4 className="welcome-name">Tooba Usman</h4>
+                <h4 className="welcome-name">Ms. Munaza Abid</h4>
+
+                <div className="welcome-role">Brides' Mother</div>
+              </article>
+
+              <article className="welcome-card">
+                <div className="welcome-mark">✦</div>
+
+                <h4 className="welcome-name">Ms. Rafia Sajid</h4>
+
+                <div className="welcome-role">Brides' Aunt</div>
+              </article>
+
+              <article className="welcome-card">
+                <div className="welcome-mark">✦</div>
+
+                <h4 className="welcome-name">Ms. Gulnaz Shahid</h4>
+
+                <div className="welcome-role">Brides' Aunt</div>
+              </article>
+
+              <article className="welcome-card">
+                <div className="welcome-mark">✦</div>
+
+                <h4 className="welcome-name">Ms. Tooba Usman</h4>
 
                 <div className="welcome-role">Brides' Sister</div>
               </article>
