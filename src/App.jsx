@@ -1334,7 +1334,7 @@ export default function App() {
           </div>
         </div>
 
-        <div className="scroll-cue">Discover</div>
+        
       </header>
 
       {/* =========================
