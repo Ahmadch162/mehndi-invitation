@@ -364,6 +364,11 @@ export default function App() {
           background: var(--gold);
         }
 
+        .hero-date-sep {
+          color: var(--gold-light);
+          font-size: .7em;
+        }
+
         .scroll-cue {
           position: absolute;
           z-index: 5;
@@ -736,6 +741,25 @@ export default function App() {
           text-transform: uppercase;
         }
 
+        .invitation-time {
+          display: inline-flex;
+          align-items: center;
+          gap: 14px;
+          margin-top: 22px;
+          color: var(--gold-light);
+          font-family: "Cormorant Garamond", serif;
+          font-size: 20px;
+          letter-spacing: .04em;
+        }
+
+        .invitation-time::before,
+        .invitation-time::after {
+          content: "";
+          width: 30px;
+          height: 1px;
+          background: rgba(226,201,132,.5);
+        }
+
         /* =========================
            WELCOME TEAM
         ========================= */
@@ -833,7 +857,7 @@ export default function App() {
 
         .details-grid {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(4, 1fr);
           gap: 20px;
         }
 
@@ -887,6 +911,12 @@ export default function App() {
           color: var(--muted);
           font-size: 12px;
           margin-top: 6px;
+        }
+
+        @media (max-width: 1000px) and (min-width: 801px) {
+          .details-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
         }
 
         /* =========================
@@ -1182,6 +1212,8 @@ export default function App() {
 
           .hero-date {
             font-size: 19px;
+            flex-wrap: wrap;
+            row-gap: 8px;
           }
 
           .bride-card {
@@ -1330,7 +1362,7 @@ export default function App() {
           </p>
 
           <div className={`hero-date ${loaded ? "fade-up delay-3" : ""}`}>
-            16 October 2026
+            16 October 2026 <span className="hero-date-sep">·</span> 7:00 PM Onward
           </div>
         </div>
 
@@ -1457,6 +1489,8 @@ export default function App() {
               <strong>Zoya Abid</strong>
             </p>
 
+            <div className="invitation-time">7:00 PM Onward</div>
+
             <p className="invitation-small">
               An evening of mehndi • music • memories • merriment
             </p>
@@ -1578,6 +1612,29 @@ export default function App() {
                   strokeLinejoin="round"
                   aria-hidden="true"
                 >
+                  <circle cx="12" cy="12" r="8.5" />
+                  <path d="M12 7.5V12l3 2" />
+                </svg>
+              </div>
+
+              <div className="detail-label">Time</div>
+
+              <div className="detail-value">7:00 PM</div>
+
+              <div className="detail-sub">Onward</div>
+            </div>
+
+            <div className="detail">
+              <div className="detail-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
                   <path d="M3.5 11.5 12 4l8.5 7.5" />
                   <path d="M5.5 10v10h13V10" />
                   <path d="M10 20v-5.5h4V20" />
@@ -1640,7 +1697,7 @@ export default function App() {
           Sarosh Abid <span>&</span> Zoya Abid
         </div>
 
-        <div className="footer-date">16 · 10 · 2026 &nbsp; • &nbsp; Home</div>
+        <div className="footer-date">16 · 10 · 2026 &nbsp; • &nbsp; 7:00 PM &nbsp; • &nbsp; Home</div>
 
         <div className="footer-bottom">With love, for two beautiful brides</div>
       </footer>
@@ -1797,7 +1854,7 @@ function EnvelopeIntro({ onOpen }) {
             </span>
             <span className="ei-card-line" />
             <span className="ei-card-event">Mehndi Celebration</span>
-            <span className="ei-card-date">16 October 2026</span>
+            <span className="ei-card-date">16 October 2026 · 7:00 PM</span>
           </span>
 
           <span className="ei-left" />
