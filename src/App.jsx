@@ -903,7 +903,7 @@ export default function App() {
         .detail-value {
           color: var(--deep);
           font-family: "Cormorant Garamond", serif;
-          font-size: 30px;
+          font-size: 25px;
           font-weight: 600;
         }
 
