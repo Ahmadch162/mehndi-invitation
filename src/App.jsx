@@ -1362,7 +1362,7 @@ export default function App() {
           </p>
 
           <div className={`hero-date ${loaded ? "fade-up delay-3" : ""}`}>
-            16 October 2026 <span className="hero-date-sep">·</span> 7:00 PM
+            16 October 2026 
           </div>
         </div>
 
