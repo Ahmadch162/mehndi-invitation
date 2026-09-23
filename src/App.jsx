@@ -1362,7 +1362,7 @@ export default function App() {
           </p>
 
           <div className={`hero-date ${loaded ? "fade-up delay-3" : ""}`}>
-            16 October 2026 <span className="hero-date-sep">·</span> 7:00 PM – 10:00 PM
+            16 October 2026 <span className="hero-date-sep">·</span> 7:00 PM
           </div>
         </div>
 
@@ -1697,7 +1697,7 @@ export default function App() {
           Sarosh Abid <span>&</span> Zoya Abid
         </div>
 
-        <div className="footer-date">16 · 10 · 2026 &nbsp; • &nbsp; 7:00 PM – 10:00 PM &nbsp; • &nbsp; Home</div>
+        <div className="footer-date">16 · 10 · 2026 &nbsp; • &nbsp; 7:00 PM &nbsp; • &nbsp; Home</div>
 
         <div className="footer-bottom">With love, for two beautiful brides</div>
       </footer>
