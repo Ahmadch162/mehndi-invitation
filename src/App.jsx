@@ -1362,7 +1362,7 @@ export default function App() {
           </p>
 
           <div className={`hero-date ${loaded ? "fade-up delay-3" : ""}`}>
-            16 October 2026 <span className="hero-date-sep">·</span> 7:00 PM Onward
+            16 October 2026 <span className="hero-date-sep">·</span> 7:00 PM – 10:00 PM
           </div>
         </div>
 
@@ -1489,7 +1489,7 @@ export default function App() {
               <strong>Zoya Abid</strong>
             </p>
 
-            <div className="invitation-time">7:00 PM Onward</div>
+            <div className="invitation-time">7:00 PM – 10:00 PM</div>
 
             <p className="invitation-small">
               An evening of mehndi • music • memories • merriment
@@ -1619,9 +1619,9 @@ export default function App() {
 
               <div className="detail-label">Time</div>
 
-              <div className="detail-value">7:00 PM</div>
+              <div className="detail-value">7:00 PM – 10:00 PM</div>
 
-              <div className="detail-sub">Onward</div>
+              <div className="detail-sub">An Unforgettable Evening</div>
             </div>
 
             <div className="detail">
@@ -1697,7 +1697,7 @@ export default function App() {
           Sarosh Abid <span>&</span> Zoya Abid
         </div>
 
-        <div className="footer-date">16 · 10 · 2026 &nbsp; • &nbsp; 7:00 PM &nbsp; • &nbsp; Home</div>
+        <div className="footer-date">16 · 10 · 2026 &nbsp; • &nbsp; 7:00 PM – 10:00 PM &nbsp; • &nbsp; Home</div>
 
         <div className="footer-bottom">With love, for two beautiful brides</div>
       </footer>
@@ -1854,7 +1854,7 @@ function EnvelopeIntro({ onOpen }) {
             </span>
             <span className="ei-card-line" />
             <span className="ei-card-event">Mehndi Celebration</span>
-            <span className="ei-card-date">16 October 2026 · 7:00 PM</span>
+            <span className="ei-card-date">16 October 2026 · 7:00 PM – 10:00 PM</span>
           </span>
 
           <span className="ei-left" />
